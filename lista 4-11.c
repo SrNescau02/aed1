@@ -27,4 +27,6 @@ main ()
 
   printf ("\n numero de vezes que o numero 5 foi digitada =%i", contador);
   return 0;
-}
+} 
+// teste
+
