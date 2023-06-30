@@ -76,7 +76,7 @@ class Circulo : public Forma{
 
 int main(){
 
-Retangulo retangulo(2,4);
+Retangulo retangulo(20,30);
 
 cout << " perimetro do triagnulo " <<  retangulo.perimetro()<< endl;
 cout << " area do triangulo " << retangulo.area() << endl;
