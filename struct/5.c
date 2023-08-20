@@ -7,59 +7,21 @@ typedef struct{
     float preco;
 }Produto;
 
-
-
-void imprimir(Produto produto){
-    printf("Codigo: %d\n",produto.codigo);
-    printf("Nome: %s\n",produto.nome);
-    printf("Preco: %.2f\n",produto.preco);
+void imprimeProduto(Produto p[], int n){
+    printf("Codigo: %d\n", p[n].codigo);
+    printf("Nome: %s\n", p[n].nome);
+    printf("Preco: %.2f\n", p[n].preco);
 }
 
-float media(Produto produto[],int n){
-  int soma=0;
-    for (int i=0; i<n; i++){
-      
-        soma+=produto[i].preco;
+//Crie uma função que recebe as informações do produto e retorna produto corresponde (estrutura).
+float retornaprduto(int p.codigo, char p.nome, float p.preco){
+    return p;
+}
+   
+
+
 
    
-    }
-      return soma/n;
-}
-
-
-
-
-int main(){
-
-    int n;
-    float mediaa=0;
-    printf("\n digite quantos produtos");
-    scanf("%d",&n);
-
-    Produto produto[n];
-
-
-    for(int i=0;i<n;i++){
-        scanf("%d",&produto[i].codigo);
-        scanf("%s",produto[i].nome);
-        scanf("%f",&produto[i].preco);
-    }
-for(int i=0;i<n;i++){
-    imprimir(produto[i]);
-}
-    mediaa=media(produto,n);
-
-    printf("\n media dos produtos= %f",mediaa);
-
-
-}
-
-
-
-
-
-
-
 
 
 
