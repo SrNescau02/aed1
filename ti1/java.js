@@ -1,19 +1,29 @@
-function addTip() {
-    // Obter os valores dos campos
-    var tipName = document.getElementById("tipName").value;
-    var tipDate = document.getElementById("tipDate").value;
-    var tipTheme = document.getElementById("tipTheme").value;
-
-    // Criar um elemento de lista para exibir a dica
-    var tipItem = document.createElement("div");
-    tipItem.className = "tip-item";
-    tipItem.innerHTML = "<strong>" + tipName + "</strong> - " + tipDate + "<br>Tema: " + tipTheme;
-
-    // Adicionar a dica à lista de dicas
-    document.getElementById("tipsList").appendChild(tipItem);
-
-    // Limpar os campos do formulário
-    document.getElementById("tipName").value = "";
-    document.getElementById("tipDate").value = "";
-    document.getElementById("tipTheme").value = "";
-}
+function adicionarDica() {
+    var nome = document.getElementById('nome').value;
+    var data = document.getElementById('data').value;
+    var tema = document.getElementById('tema').value;
+    var descricao = document.getElementById('descricao').value;
+  
+    if (nome && data && tema && descricao) {
+      var dicasContainer = document.getElementById('dicasContainer');
+  
+      // Criar um novo elemento div para a dica
+      var novaDica = document.createElement('div');
+      novaDica.classList.add('dica');
+  
+      // Preencher o conteúdo da dica
+      novaDica.innerHTML = '<strong>Nome:</strong> ' + nome +
+                           '<br><strong>Data:</strong> ' + data +
+                           '<br><strong>Tema:</strong> ' + tema +
+                           '<br><strong>Dica:</strong> ' + descricao;
+  
+      // Adicionar a nova dica ao contêiner de dicas
+      dicasContainer.appendChild(novaDica);
+  
+      // Limpar o formulário
+      document.getElementById('formDica').reset();
+    } else {
+      alert('Por favor, preencha todos os campos.');
+    }
+  }
+  
